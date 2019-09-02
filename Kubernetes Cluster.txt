@@ -1,0 +1,5 @@
+gcloud config set project DemoChandrsekhar
+# Create the cluster with 2 nodes
+gcloud container clusters create ChandraJango --scopes "https://www.googleapis.com/auth/userinfo.email","cloud-platform" --num-nodes 2 
+# Configure kubectl with the right context
+gcloud container clusters get-credentials ChandraJango
