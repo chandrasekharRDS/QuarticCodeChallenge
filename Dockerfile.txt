@@ -9,6 +9,9 @@ RUN apk add python3-dev postgresql-dev gcc linux-headers libc-dev
 
 WORKDIR /usr/src/app/
 
+git clone https://github.com/waprin/kubernetes_django_postgres_redis
+pip install -r requirements.txt
+
 COPY ./requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
